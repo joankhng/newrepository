@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Day 31 - Flash Card</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    /* This page matches the Tkinter app's own colours instead of the site theme */
+    .flashy {
+      background: #B1DDC6;
+      border-radius: 12px;
+      padding: 2rem;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      max-width: 560px;
+      margin: 1rem 0;
+    }
+    .card {
+      position: relative;
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      user-select: none;
+    }
+    .card img { display: block; width: 100%; height: auto; }
+    #card-title, #card-word {
+      position: absolute; left: 50%; transform: translateX(-50%);
+      width: 90%; color: black; margin: 0;
+    }
+    #card-title { top: 22%; font-size: 1.6rem; font-style: italic; }
+    #card-word { top: 44%; font-size: 2.4rem; font-weight: bold; }
+    .card.back #card-title, .card.back #card-word { color: white; }
+    .buttons { margin-top: 1rem; display: flex; justify-content: space-around; }
+    .buttons button {
+      background: none; border: none; padding: 0; cursor: pointer;
+    }
+    .buttons img { width: 72px; height: auto; display: block; }
+    #status { margin-top: 0.75rem; color: #2b5c45; font-size: 0.9rem; }
+    #reset-progress {
+      font: inherit; font-size: 0.85rem; background: none; border: 1px solid #2b5c45;
+      color: #2b5c45; padding: 0.2rem 0.6rem; margin-top: 0.5rem; cursor: pointer; border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <main class="terminal">
+    <div id="terminal-output">
+      <p class="green">A French word shows for 3 seconds, then flips to English. ✔ = I know it (removed from the deck), ✗ = show me again later</p>
+    </div>
+    <div class="flashy">
+      <div class="card" id="card">
+        <img id="card-image" src="images/card_front.png" alt="flash card">
+        <p id="card-title">French</p>
+        <p id="card-word">word</p>
+      </div>
+      <div class="buttons">
+        <button id="unknown" title="Don't know it yet"><img src="images/wrong.png" alt="wrong"></button>
+        <button id="known" title="I know this one"><img src="images/right.png" alt="right"></button>
+      </div>
+      <div id="status"></div>
+      <button id="reset-progress">Reset progress</button>
+    </div>
+    <p class="footer-links">
+      <a href="../">← all days</a> ·
+      <a href="https://github.com/joankhng/python-bootcamp/blob/main/flash-card/main.py">view the Python code</a>
+    </p>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>
