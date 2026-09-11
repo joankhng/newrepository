@@ -23,3 +23,4 @@ Select projects from [100 Days of Code: The Complete Professional Python Bootcam
 | 25 | [US States Game](us-states-game/) | `pandas` (`read_csv`/`to_csv`) · DataFrame filtering · `.title()` string method |
 | 28 | [Pomodoro](pomodoro/) | `tkinter` GUI · event-driven `window.after()` timers · canvas text over images |
 | 31 | [Flash Card](flash-card/) | `tkinter` canvas images · `after()`/`after_cancel()` timers · `pandas` `to_dict(orient="records")` · saving progress to CSV |
+| 34 | [Quizzler](quizzler/) | `requests` + Open Trivia DB API · `html.unescape` · tkinter class-based UI · GUI + live API rebuild of Day 17 |
